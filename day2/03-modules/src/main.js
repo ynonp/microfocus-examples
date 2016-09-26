@@ -1,7 +1,15 @@
 import Clicker from 'clickercls';
+import SyncText from 'synctext';
 
-const clickers = document.querySelectorAll('.clicker');
-for (let i=0; i < clickers.length; i++) {
-  const c = new Clicker(clickers[i]);
+const widgets = {
+  clicker: Clicker,
+  synctext: SyncText,
+};
+
+
+const nodes = document.querySelectorAll('.widget');
+for (let i=0; i < nodes.length; i++) {
+  const t = nodes[i].dataset.type;
+  const c = new widgets[t](nodes[i]);
 }
 
