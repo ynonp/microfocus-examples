@@ -9,12 +9,18 @@ function Clicker(el) {
   this.btnEl = el.querySelector('button');
   this.val   = 0;
 
+  this._pleaseDontTouch = 5;
+
   // ALL event handlers SHOULD BE bound
   this.btnEl.addEventListener('click', this.handleClick.bind(this));
 }
 
 Clicker.prototype.handleClick = function (ev) {
-  this.val+=1;
+  this.setValue(this.val + 1);
+};
+
+Clicker.prototype.setValue = function (val) {
+  this.val = val;
   this.valEl.textContent = this.val;
 };
 

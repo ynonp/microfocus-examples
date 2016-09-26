@@ -1,3 +1,5 @@
+import counterStore from 'services/counter_service';
+
 import Clicker from 'clicker';
 
 export default class HomePage {
@@ -9,6 +11,14 @@ export default class HomePage {
     `;
     this.el = el;
     this.clicker = new Clicker(el.querySelector('.clicker'));
+    this.clicker.setValue(counterStore.getCounterValue('home'));
+  }
+
+  onLeave () {
+    counterStore.saveCounterValue('home', this.clicker.val);
+  }
+
+  onEnter () {
   }
 }
 

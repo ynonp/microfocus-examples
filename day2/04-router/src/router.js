@@ -21,7 +21,19 @@ export default class Router {
   }
 
   show (pageName) {
-    this.currentPage = new this.pages[pageName](this.el);
+    if (this.currentPage && (typeof this.currentPage.onLeave === 'function')) {
+      this.currentPage.onLeave();
+    }
+    const page = this.pages[pageName];
+    if (typeof page === 'function') {
+      this.currentPage = new this.pages[pageName](this.el);
+    } else {
+      this.currentPage = page;
+    }
+
+    if (typeof this.currentPage.onEnter === 'function') {
+      this.currentPage.onEnter(this.el);
+    }
   }
 }
 
