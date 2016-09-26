@@ -1,0 +1,31 @@
+.image-slider {
+  position: relative;
+  width: 50vw;
+  overflow: hidden;
+  border: 2px solid;
+  height: 40vh;
+}
+
+.image-slider img {
+  width: 50vw;
+  height: 40vh;
+}
+
+.image-slider > div {
+  position: absolute;
+  height: 40vh;
+  width: 300%;
+  transition: all 0.5s;
+}
+
+.state-0 > div {
+  left: 0;
+}
+
+.state-1 > div {
+  left: -100%;
+}
+
+.state-2 > div {
+  left: -200%;
+}

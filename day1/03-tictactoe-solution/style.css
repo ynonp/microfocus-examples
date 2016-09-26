@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.cell {
+  display: inline-block;
+  vertical-align: top;
+  width: 30vmin;
+  height: 25vmin;
+  border: 1px solid #333;
+  margin: 2px;  
+  line-height: 30vmin;
+}
+
+.row {
+}
+
+#game {
+  text-align:center;
+}
+
+#status {
+  height: 10vh;
+  background: #222;
+  margin: 0;
+  color: white;
+  text-align:center;
+  line-height: 30px;
+}
+
