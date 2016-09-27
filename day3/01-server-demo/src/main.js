@@ -21,6 +21,7 @@ class ChatWindow {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/messages');
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.addEventListener('load', this.refresh.bind(this));
     xhr.send(JSON.stringify({text: this.msgEl.value}));
     this.msgEl.value = '';
   }
@@ -77,3 +78,6 @@ btn.addEventListener('click', getDataFromServer);
 
 const root = document.querySelector('#messages');
 const chat = new ChatWindow(root);
+
+setInterval(chat.refresh.bind(chat), 1000);
+
