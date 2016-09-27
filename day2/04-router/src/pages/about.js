@@ -1,6 +1,7 @@
 class AboutPage {
   constructor () {
     this.count = 0;
+    this.el = document.createElement('div');
   }
 
   initDOM (el) {
@@ -12,9 +13,9 @@ class AboutPage {
     this.el = el;
   }
 
-  onEnter (el) {
+  onEnter () {
     this.count += 1;
-    this.initDOM(el);
+    this.initDOM(this.el);
   }
 }
 

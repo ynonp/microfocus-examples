@@ -26,5 +26,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^1.16.1"
   }
 }

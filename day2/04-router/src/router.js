@@ -1,11 +1,13 @@
 import HomePage from 'pages/home';
 import AboutPage from 'pages/about';
+import FindYouPage from 'pages/findyou';
 
 export default class Router {
   constructor (el) {
     this.pages = {
       home: HomePage,
       about: AboutPage,
+      findyou: FindYouPage,
     };
     this.el = el;
     this.showPageFromHash();
@@ -26,14 +28,26 @@ export default class Router {
     }
     const page = this.pages[pageName];
     if (typeof page === 'function') {
-      this.currentPage = new this.pages[pageName](this.el);
+      this.currentPage = new this.pages[pageName]();
     } else {
       this.currentPage = page;
     }
 
     if (typeof this.currentPage.onEnter === 'function') {
-      this.currentPage.onEnter(this.el);
+      const enterTask = this.currentPage.onEnter();
+      if (enterTask && typeof enterTask.then === 'function') {
+        // enter returned a promise so better wait for it
+        this.el.innerHTML = '<p>Loading, please wait...</p>';
+        enterTask.then(this._showNextPage.bind(this));
+      } else {
+        this._showNextPage();
+      }
     }
+  }
+
+  _showNextPage () {
+    this.el.innerHTML = '';
+    this.el.appendChild(this.currentPage.el);
   }
 }
 
