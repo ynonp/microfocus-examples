@@ -4,7 +4,7 @@
   "description": "grunt tasks for Durandal's HTML Starter Kit to ease testing/building",
   "main": "app/main.js",
   "scripts": {
-    "build": "node node_modules/grunt-cli/bin/grunt"
+    "app": "node node_modules/grunt-cli/bin/grunt"
   },
   "keywords": [
     "Durandal",

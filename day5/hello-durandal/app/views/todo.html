@@ -1,0 +1,15 @@
+<section>
+  <h1>Todo Page</h1>
+  <form data-bind="submit: handleSubmit">
+    <input type="text" data-bind="value: itemText" />
+    <button>Add</button>
+  </form>
+
+  <ul data-bind="foreach: things">
+    <li >
+      <span data-bind="text: text" />
+      <button data-bind="click: $parent.removeItem">Remove</button>
+    </li>
+  </ul>
+</section>
+
