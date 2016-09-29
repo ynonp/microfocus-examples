@@ -1,0 +1,47 @@
+.active-game {
+  background: darkblue;
+  color:white;
+}
+
+.game-switcher {
+  height: 100vh;
+  background: lightblue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.cell {
+  display: inline-block;
+  vertical-align: top;
+  text-align:center;
+  width: calc(30% - 30px);
+  height: 20vh;
+  line-height: 20vmin;
+  border: 1px solid #333;
+  margin: 10px;  
+  font-size: 24px;
+}
+
+.game {
+  background: #d0d0d0;
+  margin-top:0;
+  padding: 20px;
+}
+
+.game-row {
+  text-align:center;
+}
+
+.status {
+  height: 10vh;
+  background: #222;
+  color: white;
+  margin-bottom: 0;
+  text-align:center;
+  line-height: 30px;
+}
+
+
