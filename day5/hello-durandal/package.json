@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "grunt tasks for Durandal's HTML Starter Kit to ease testing/building",
   "main": "app/main.js",
-  "scripts": {},
+  "scripts": {
+    "build": "node node_modules/grunt-cli/bin/grunt"
+  },
   "keywords": [
     "Durandal",
     "HTML Starter Kit",
@@ -35,6 +37,7 @@
     "bootstrap": "^3.3.7",
     "durandal": "^2.1.0",
     "eslint-grunt": "^1.0.0",
+    "grunt-cli": "^1.2.0",
     "jquery": "^3.1.0",
     "knockout": "^3.4.0",
     "requirejs-text": "^2.0.12"
