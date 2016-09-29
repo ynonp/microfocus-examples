@@ -1,12 +1,14 @@
 ﻿requirejs.config({
   paths: {
     "jquery": "../node_modules/jquery/dist/jquery",
+    "underscore": "../node_modules/underscore/underscore",
     "knockout": "../node_modules/knockout/build/output/knockout-latest",
     "text": "../node_modules/requirejs-text/text",
     "durandal": "../node_modules/durandal/js",
     "plugins": "../node_modules/durandal/js/plugins",
     "transitions": "../node_modules/durandal/js/transitions",
     'bootstrap': '../node_modules/bootstrap/dist/js/bootstrap',
+    'lib': '../lib',
   },
   shim: {
     'bootstrap': {

@@ -40,6 +40,7 @@
     "grunt-cli": "^1.2.0",
     "jquery": "^3.1.0",
     "knockout": "^3.4.0",
-    "requirejs-text": "^2.0.12"
+    "requirejs-text": "^2.0.12",
+    "underscore": "^1.8.3"
   }
 }

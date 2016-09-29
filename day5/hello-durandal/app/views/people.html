@@ -1,0 +1,10 @@
+<section>
+  <h1>Everyone</h1>
+  <ul data-bind="foreach: people">
+    <li>
+      <a data-bind="attr: { href: '#/person/' + id }, text: name" />
+    </li>
+  </ul>
+</section>
+
+

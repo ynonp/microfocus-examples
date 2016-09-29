@@ -1,0 +1,14 @@
+{
+  "app/views/*.html": {
+    "alternate": "app/viewmodels/{}.js",
+    "type": "view"
+  },
+  "app/viewmodels/*.js": {
+    "alternate": "app/views/{}.html",
+    "type": "vm"
+  },
+  "spec/viewmodels/*.spec.js": {
+    "type": "spec"
+  }
+}
+

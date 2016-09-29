@@ -1,0 +1,13 @@
+<section>
+  <h1>Words Page</h1>
+  <textarea data-bind="value: text" />
+
+  <table>
+    <tbody data-bind="foreach: words">
+    <tr>
+      <td data-bind="text: word" />
+      <td data-bind="text: count" />
+    </tr>
+    </tbody>
+  </table>
+</section>

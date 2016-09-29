@@ -3,6 +3,7 @@ define([], function() {
     "baseUrl": "app/",
     "paths": {
       "jquery": "../node_modules/jquery/dist/jquery",
+    "underscore": "../node_modules/underscore/underscore",
       "knockout": "../node_modules/knockout/build/output/knockout-latest",
       "text": "../node_modules/requirejs-text/text",
       "durandal": "../node_modules/durandal/js",
@@ -21,11 +22,11 @@ define([], function() {
         exports: "jasmineRequire"
       }
     }
-
   });
 
   var specs = [
     'spec/viewmodels/welcome.spec.js',
+    'spec/viewmodels/words.spec.js',
   ];
 
   require(["../lib/bootAmd.js"].concat(specs), function (boot) {

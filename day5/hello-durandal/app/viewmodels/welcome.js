@@ -11,6 +11,7 @@
 
       this.minutes = ko.computed({
         read: function() {
+          console.log('minutes!');
           return that.seconds() / 60;
         },
         write: function(value) {
